@@ -7,7 +7,7 @@
             "Vendor\\Cargo\\": "src/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Emre Altın",
