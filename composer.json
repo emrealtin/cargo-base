@@ -1,10 +1,10 @@
 {
-    "name": "vendor/cargo",
+    "name": "cargo/base",
     "type": "library",
     "license": "Emre Altin",
     "autoload": {
         "psr-4": {
-            "Vendor\\Cargo\\": "src/"
+            "Cargo\\Base\\": "src/"
         }
     },
     "minimum-stability": "stable",
