@@ -1,0 +1,17 @@
+{
+    "name": "vendor/cargo",
+    "type": "library",
+    "license": "Emre Altin",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Cargo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emre Altın",
+            "email": "iletisim@emrealtin.com.tr"
+        }
+    ],
+    "require": {}
+}
