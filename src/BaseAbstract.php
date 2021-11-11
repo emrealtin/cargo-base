@@ -26,14 +26,19 @@ abstract class BaseAbstract implements BaseInterface
         $this->config = $config;
     }
 
-   public function auth($params = []): array
+   public function setConfig($config = []): array
    {
-       return [];
+       $this->config = $config;
    }
 
-    public function isAuth(): bool
+   public function getConfig() :array
+   {
+        return $this->config;
+   }
+
+    public function isConfig(): bool
     {
-        if(!empty($this->auth()))
+        if(!empty($this->config))
         {
             return true;
         }
