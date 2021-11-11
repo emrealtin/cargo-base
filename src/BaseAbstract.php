@@ -52,6 +52,10 @@ abstract class BaseAbstract implements BaseInterface
     /**
      * @var string
      */
+    public $receiverPhone;
+    /**
+     * @var string
+     */
     public $trackingUrl;
     /**
      * @var float
@@ -223,6 +227,16 @@ abstract class BaseAbstract implements BaseInterface
     public function getReceiverTown(): string
     {
         return $this->receiverTown;
+    }
+
+    public function setReceiverPhone($receiverPhone): string
+    {
+        $this->receiverPhone = $receiverPhone;
+    }
+
+    public function getReceiverPhone(): string
+    {
+        return $this->receiverPhone;
     }
 
     public function setTrackingUrl($trackingUrl): string

@@ -41,6 +41,9 @@ interface BaseInterface
     public function setReceiverAddress($receiverAddress) :string;
     public function getReceiverAddress() :string;
 
+    public function setReceiverPhone($receiverPhone) :string;
+    public function getReceiverPhone() :string;
+
     public function setReceiverCity($receiverCity) :string;
     public function getReceiverCity() :string;
 
