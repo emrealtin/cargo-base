@@ -2,7 +2,9 @@
 
 namespace Vendor\Cargo;
 
-abstract class Base
+use Cargo\Base\BaseInterface;
+
+abstract class BaseAbstract implements BaseInterface
 {
     public function __construct(){}
     public function auth(){}
