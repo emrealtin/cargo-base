@@ -22,10 +22,6 @@ abstract class BaseAbstract implements BaseInterface
      */
     public $response;
     /**
-     * @var array
-     */
-    public $statusMapping = [];
-    /**
      * @var string
      */
     public $integrationCode;
@@ -131,16 +127,6 @@ abstract class BaseAbstract implements BaseInterface
     public function getResponse() :string
     {
         return $this->response;
-    }
-
-    public function setRequestMapping($statusMapping = []) :array
-    {
-        $this->statusMapping = $statusMapping;
-    }
-
-    public function getRequestMapping() :array
-    {
-        return $this->statusMapping;
     }
 
     public function setIntegrationCode($integrationCode): string
