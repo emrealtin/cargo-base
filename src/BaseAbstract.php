@@ -19,11 +19,11 @@ abstract class BaseAbstract implements BaseInterface
      */
     public $request;
     /**
-     * @var string
+     * @var object
      */
     public $createPackageResponse;
     /**
-     * @var string
+     * @var object
      */
     public $cargoTrackingResponse;
     /**
@@ -156,7 +156,7 @@ abstract class BaseAbstract implements BaseInterface
         $this->createPackageResponse = $response;
     }
 
-    public function getCreatePackageResponse(): string
+    public function getCreatePackageResponse(): object
     {
         return $this->createPackageResponse;
     }
@@ -166,7 +166,7 @@ abstract class BaseAbstract implements BaseInterface
         $this->cargoTrackingResponse = $response;
     }
 
-    public function getCargoTrackingResponse(): string
+    public function getCargoTrackingResponse(): object
     {
         return $this->cargoTrackingResponse;
     }

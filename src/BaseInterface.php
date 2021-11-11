@@ -28,11 +28,11 @@ interface BaseInterface
 
     public function setCreatePackageResponse($response);
 
-    public function getCreatePackageResponse(): string;
+    public function getCreatePackageResponse(): object;
 
     public function setCargoTrackingResponse($response) :string;
 
-    public function getCargoTrackingResponse() :string;
+    public function getCargoTrackingResponse() :object;
 
     public function setResultCode($resultCode): string;
 
