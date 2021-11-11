@@ -22,9 +22,6 @@ abstract class BaseAbstract implements BaseInterface
     /**
      * @var array
      */
-    public function __construct($config){
-        $this->config = $config;
-    }
 
    public function setConfig($config = []): array
    {
