@@ -26,8 +26,29 @@ abstract class BaseAbstract implements BaseInterface
      */
     public $statusMapping = [];
     /**
-     * @var array
+     * @var string
      */
+    public $integrationCode;
+    /**
+     * @var string
+     */
+    public $trackingNumber;
+    /**
+     * @var string
+     */
+    public $sender;
+    /**
+     * @var string
+     */
+    public $trackingUrl;
+    /**
+     * @var float
+     */
+    public $price;
+    /**
+     * @var string
+     */
+    public $reason;
 
     public function setServiceUrl($serviceUrl): string
     {
@@ -120,5 +141,65 @@ abstract class BaseAbstract implements BaseInterface
     public function getRequestMapping() :array
     {
         return $this->statusMapping;
+    }
+
+    public function setIntegrationCode($integrationCode): string
+    {
+        $this->integrationCode = $integrationCode;
+    }
+
+    public function getIntegrationCode(): string
+    {
+        return $this->integrationCode;
+    }
+
+    public function setTrackingNumber($trackingNumber): string
+    {
+        $this->trackingNumber = $trackingNumber;
+    }
+
+    public function getTrackingNumber(): string
+    {
+        return $this->trackingNumber;
+    }
+
+    public function setReason($reason): string
+    {
+        $this->reason = $reason;
+    }
+
+    public function getReason(): string
+    {
+        return $this->reason;
+    }
+
+    public function setSender($sender): string
+    {
+        $this->sender = $sender;
+    }
+
+    public function getSender(): string
+    {
+        return $this->sender;
+    }
+
+    public function setTrackingUrl($trackingUrl): string
+    {
+        $this->trackingUrl = $trackingUrl;
+    }
+
+    public function getTrackingUrl(): string
+    {
+        return $this->trackingUrl;
+    }
+
+    public function setPrice($price): string
+    {
+        $this->price = $price;
+    }
+
+    public function getPrice(): string
+    {
+        return $this->price;
     }
 }
