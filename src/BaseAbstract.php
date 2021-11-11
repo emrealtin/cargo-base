@@ -1,6 +1,8 @@
 <?php
 namespace Cargo\Base;
 
+use Cargo\Base\library\CurlRequest;
+
 abstract class BaseAbstract implements BaseInterface
 {
     /**
@@ -58,9 +60,22 @@ abstract class BaseAbstract implements BaseInterface
         // TODO: Implement getStatus() method.
     }
 
-    public function doRequest($request)
+    public function doRequest($url, $request, $headers = [], $auth = [])
     {
-        // TODO: Implement doRequest() method.
+        $curl = $this->http ?? new CurlRequest($url);
+        $curl->setOption(CURLOPT_RETURNTRANSFER, true);
+        $curl->setOption(CURLOPT_CUSTOMREQUEST, 'POST');
+        $curl->setOption(CURLOPT_FOLLOWLOCATION, true);
+        $curl->setOption(CURLOPT_MAXREDIRS, 10);
+        $curl->setOption(CURLOPT_TIMEOUT, 30);
+        $curl->setOption(CURLOPT_POSTFIELDS, $request);
+        $curl->setOption(CURLOPT_HTTPHEADER, $headers);
+
+        if ($this->isConfig()) {
+            $curl->setOption(CURLOPT_USERPWD, $this->config['username'] . ':' . $this->config['password']);
+        }
+
+        return $curl->execute();
     }
 
     public function setRequest($request) :string

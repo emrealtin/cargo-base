@@ -14,5 +14,15 @@
             "email": "iletisim@emrealtin.com.tr"
         }
     ],
-    "require": {}
+    "require": {
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-soap": "*",
+        "ext-simplexml": "*",
+        "ext-iconv": "*",
+        "ext-intl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
 }

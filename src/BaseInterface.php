@@ -9,7 +9,7 @@ interface BaseInterface
     public function createPackage();
     public function cancelPackage();
     public function getStatus();
-    public function doRequest($request);
+    public function doRequest($url, $request, $headers = [], $auth = []);
     public function setRequest($request) :string;
     public function getRequest() :string;
     public function setResponse($response);
