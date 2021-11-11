@@ -3,8 +3,25 @@ namespace Cargo\Base;
 
 abstract class BaseAbstract implements BaseInterface
 {
+    /**
+     * @var array
+     */
     public $config = [];
-
+    /**
+     * @var string
+     */
+    public $request;
+    /**
+     * @var string
+     */
+    public $response;
+    /**
+     * @var array
+     */
+    public $statusMapping = [];
+    /**
+     * @var array
+     */
     public function __construct($config){
         $this->config = $config;
     }
@@ -39,33 +56,33 @@ abstract class BaseAbstract implements BaseInterface
         // TODO: Implement doRequest() method.
     }
 
-    public function setRequest()
+    public function setRequest($request) :string
     {
-        // TODO: Implement setRequest() method.
+       $this->request = $request;
     }
 
-    public function getRequest()
+    public function getRequest() :string
     {
-        // TODO: Implement getRequest() method.
+        return $this->request;
     }
 
-    public function setResponse($data = [])
+    public function setResponse($response)
     {
-        // TODO: Implement setResponse() method.
+        $this->response = $response;
     }
 
-    public function getResponse()
+    public function getResponse() :string
     {
-        // TODO: Implement getResponse() method.
+        return $this->response;
     }
 
-    public function setRequestMapping($data = []): array
+    public function setRequestMapping($statusMapping = []) :array
     {
-        // TODO: Implement setRequestMapping() method.
+        $this->statusMapping = $statusMapping;
     }
 
-    public function getRequestMapping()
+    public function getRequestMapping() :array
     {
-        // TODO: Implement getRequestMapping() method.
+        return $this->statusMapping;
     }
 }
