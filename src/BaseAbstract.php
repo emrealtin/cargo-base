@@ -32,7 +32,23 @@ abstract class BaseAbstract implements BaseInterface
     /**
      * @var string
      */
-    public $sender;
+    public $senderName;
+    /**
+     * @var string
+     */
+    public $receiverName;
+    /**
+     * @var string
+     */
+    public $receiverAddress;
+    /**
+     * @var string
+     */
+    public $receiverCity;
+    /**
+     * @var string
+     */
+    public $receiverTown;
     /**
      * @var string
      */
@@ -159,14 +175,54 @@ abstract class BaseAbstract implements BaseInterface
         return $this->reason;
     }
 
-    public function setSender($sender): string
+    public function setSenderName($senderName): string
     {
-        $this->sender = $sender;
+        $this->senderName = $senderName;
     }
 
-    public function getSender(): string
+    public function getSenderName(): string
     {
-        return $this->sender;
+        return $this->senderName;
+    }
+
+    public function setReceiverName($receiverName): string
+    {
+        $this->receiverName = $receiverName;
+    }
+
+    public function getReceiverName(): string
+    {
+        return $this->receiverName;
+    }
+
+    public function setReceiverAddress($receiverAddress): string
+    {
+        $this->receiverAddress = $receiverAddress;
+    }
+
+    public function getReceiverAddress(): string
+    {
+        return $this->receiverAddress;
+    }
+
+    public function setReceiverCity($receiverCity): string
+    {
+        $this->receiverCity = $receiverCity;
+    }
+
+    public function getReceiverCity(): string
+    {
+        return $this->receiverCity;
+    }
+
+    public function setReceiverTown($receiverTown): string
+    {
+        $this->receiverTown = $receiverTown;
+    }
+
+    public function getReceiverTown(): string
+    {
+        return $this->receiverTown;
     }
 
     public function setTrackingUrl($trackingUrl): string

@@ -32,8 +32,20 @@ interface BaseInterface
     public function setTrackingNumber($trackingNumber) :string;
     public function getTrackingNumber() :string;
 
-    public function setSender($sender) :string;
-    public function getSender() :string;
+    public function setSenderName($senderName) :string;
+    public function getSenderName() :string;
+
+    public function setReceiverName($receiverName) :string;
+    public function getReceiverName() :string;
+
+    public function setReceiverAddress($receiverAddress) :string;
+    public function getReceiverAddress() :string;
+
+    public function setReceiverCity($receiverCity) :string;
+    public function getReceiverCity() :string;
+
+    public function setReceiverTown($receiverTown) :string;
+    public function getReceiverTown() :string;
 
     public function setTrackingUrl($trackingUrl) :string;
     public function getTrackingUrl() :string;
