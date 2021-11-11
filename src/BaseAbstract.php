@@ -6,6 +6,10 @@ use Cargo\Base\library\CurlRequest;
 abstract class BaseAbstract implements BaseInterface
 {
     /**
+     * @var string
+     */
+    public $serviceUrl;
+    /**
      * @var array
      */
     public $config = [];
@@ -25,7 +29,17 @@ abstract class BaseAbstract implements BaseInterface
      * @var array
      */
 
-   public function setConfig($config = []): array
+    public function setServiceUrl($serviceUrl): string
+    {
+        $this->serviceUrl = $serviceUrl;
+    }
+
+    public function getServiceUrl(): string
+    {
+        return $this->serviceUrl;
+    }
+
+    public function setConfig($config = []): array
    {
        $this->config = $config;
    }
@@ -35,7 +49,7 @@ abstract class BaseAbstract implements BaseInterface
         return $this->config;
    }
 
-    public function isConfig(): bool
+   public function isConfig(): bool
     {
         if(!empty($this->config))
         {

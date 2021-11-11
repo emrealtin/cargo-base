@@ -3,6 +3,8 @@ namespace Cargo\Base;
 
 interface BaseInterface
 {
+    public function setServiceUrl($serviceUrl) :string;
+    public function getServiceUrl() :string;
     public function setConfig($config = []) :array;
     public function getConfig() :array;
     public function isConfig() :bool;
