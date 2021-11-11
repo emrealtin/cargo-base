@@ -21,6 +21,10 @@ abstract class BaseAbstract implements BaseInterface
     /**
      * @var string
      */
+    public $response;
+    /**
+     * @var string
+     */
     public $integrationCode;
     /**
      * @var string
@@ -133,6 +137,16 @@ abstract class BaseAbstract implements BaseInterface
     public function getRequest(): string
     {
         return $this->request;
+    }
+
+    public function setResponse($response): string
+    {
+        $this->response = $response;
+    }
+
+    public function getResponse(): string
+    {
+        return $this->response;
     }
 
     public function setIntegrationCode($integrationCode): string

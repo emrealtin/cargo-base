@@ -26,6 +26,10 @@ interface BaseInterface
 
     public function getRequest(): string;
 
+    public function setResponse($response): string;
+
+    public function getResponse(): string;
+
     public function setReason($reason): string;
 
     public function getReason(): string;
