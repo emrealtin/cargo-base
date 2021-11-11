@@ -1,4 +1,5 @@
 <?php
+
 namespace Cargo\Base;
 
 use Cargo\Base\library\CurlRequest;
@@ -85,19 +86,18 @@ abstract class BaseAbstract implements BaseInterface
     }
 
     public function setConfig($config = []): array
-   {
-       $this->config = $config;
-   }
-
-   public function getConfig() :array
-   {
-        return $this->config;
-   }
-
-   public function isConfig(): bool
     {
-        if(!empty($this->config))
-        {
+        $this->config = $config;
+    }
+
+    public function getConfig(): array
+    {
+        return $this->config;
+    }
+
+    public function isConfig(): bool
+    {
+        if (!empty($this->config)) {
             return true;
         }
 
@@ -137,12 +137,12 @@ abstract class BaseAbstract implements BaseInterface
         return $curl->execute();
     }
 
-    public function setRequest($request) :string
+    public function setRequest($request): string
     {
-       $this->request = $request;
+        $this->request = $request;
     }
 
-    public function getRequest() :string
+    public function getRequest(): string
     {
         return $this->request;
     }
@@ -152,7 +152,7 @@ abstract class BaseAbstract implements BaseInterface
         $this->response = $response;
     }
 
-    public function getResponse() :string
+    public function getResponse(): string
     {
         return $this->response;
     }
@@ -267,12 +267,12 @@ abstract class BaseAbstract implements BaseInterface
         return $this->price;
     }
 
-    public function setResultCode($resultCode) :string
+    public function setResultCode($resultCode): string
     {
         $this->resultCode = $resultCode;
     }
 
-    public function getResultCode() :string
+    public function getResultCode(): string
     {
         return $this->resultCode;
     }
@@ -282,7 +282,7 @@ abstract class BaseAbstract implements BaseInterface
         $this->resultMessage = $resultMessage;
     }
 
-    public function getResultMessage() : string
+    public function getResultMessage(): string
     {
         return $this->resultMessage;
     }

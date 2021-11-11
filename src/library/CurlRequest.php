@@ -1,15 +1,18 @@
 <?php
+
 namespace Cargo\Base\library;
 
 class CurlRequest implements HttpRequest
 {
     private $handle = null;
 
-    public function __construct($url) {
+    public function __construct($url)
+    {
         $this->handle = curl_init($url);
     }
 
-    public function setOption($name, $value) {
+    public function setOption($name, $value)
+    {
         curl_setopt($this->handle, $name, $value);
     }
 
@@ -22,11 +25,13 @@ class CurlRequest implements HttpRequest
         return $response;
     }
 
-    public function getInfo($name) {
+    public function getInfo($name)
+    {
         return curl_getinfo($this->handle, $name);
     }
 
-    protected function close() {
+    protected function close()
+    {
         curl_close($this->handle);
     }
 }
