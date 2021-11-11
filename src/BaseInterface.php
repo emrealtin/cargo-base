@@ -26,22 +26,6 @@ interface BaseInterface
 
     public function getRequest(): string;
 
-    public function setCreatePackageResponse($response);
-
-    public function getCreatePackageResponse(): object;
-
-    public function setCargoTrackingResponse($response) :string;
-
-    public function getCargoTrackingResponse() :object;
-
-    public function setResultCode($resultCode): string;
-
-    public function getResultCode(): string;
-
-    public function setResultMessage($resultMessage);
-
-    public function getResultMessage(): string;
-
     public function setReason($reason): string;
 
     public function getReason(): string;
