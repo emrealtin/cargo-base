@@ -3,7 +3,7 @@ namespace Cargo\Base;
 
 interface BaseInterface
 {
-    public function auth($params = []) :bool;
+    public function auth($params = []) :array;
     public function isAuth() :bool;
     public function createPackage();
     public function cancelPackage();

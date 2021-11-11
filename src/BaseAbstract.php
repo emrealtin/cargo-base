@@ -26,14 +26,19 @@ abstract class BaseAbstract implements BaseInterface
         $this->config = $config;
     }
 
-   public function auth($params = []): bool
+   public function auth($params = []): array
    {
-       // TODO: Implement auth() method.
+       return [];
    }
 
     public function isAuth(): bool
     {
-        // TODO: Implement isAuth() method.
+        if(!empty($this->auth()))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public function createPackage()
