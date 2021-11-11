@@ -65,6 +65,14 @@ abstract class BaseAbstract implements BaseInterface
      * @var string
      */
     public $reason;
+    /**
+     * @var string
+     */
+    public $resultCode;
+    /**
+     * @var string
+     */
+    public $resultMessage;
 
     public function setServiceUrl($serviceUrl): string
     {
@@ -257,5 +265,25 @@ abstract class BaseAbstract implements BaseInterface
     public function getPrice(): string
     {
         return $this->price;
+    }
+
+    public function setResultCode($resultCode) :string
+    {
+        $this->resultCode = $resultCode;
+    }
+
+    public function getResultCode() :string
+    {
+        return $this->resultCode;
+    }
+
+    public function setResultMessage($resultMessage)
+    {
+        $this->resultMessage = $resultMessage;
+    }
+
+    public function getResultMessage() : string
+    {
+        return $this->resultMessage;
     }
 }

@@ -16,6 +16,10 @@ interface BaseInterface
     public function getRequest() :string;
     public function setResponse($response);
     public function getResponse() :string;
+    public function setResultCode($resultCode) :string;
+    public function getResultCode() :string;
+    public function setResultMessage($resultMessage);
+    public function getResultMessage() :string;
     public function setReason($reason) :string;
     public function getReason() :string;
     public function setIntegrationCode($integrationCode) :string;
