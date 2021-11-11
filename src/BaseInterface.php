@@ -23,9 +23,6 @@ interface BaseInterface
     public function setResponse($response);
     public function getResponse() :string;
 
-    public function setRequestMapping($statusMapping = []) :array;
-    public function getRequestMapping() :array;
-
     public function setReason($reason) :string;
     public function getReason() :string;
 
