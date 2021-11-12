@@ -1,6 +1,6 @@
 <?php
 
-namespace Cargo\Base\library;
+namespace Cargo\Base\Library;
 
 interface HttpRequest
 {
