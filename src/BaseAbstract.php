@@ -2,7 +2,7 @@
 
 namespace Cargo\Base;
 
-use Cargo\Base\library\CurlRequest;
+use Cargo\Base\Library\CurlRequest;
 
 abstract class BaseAbstract implements BaseInterface
 {
